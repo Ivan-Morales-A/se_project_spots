@@ -1,0 +1,111 @@
+.profile{
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 34px 0 20px;
+    border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+    
+}
+.profile__avatar{
+    margin-right: 20px;
+    height: 190px;
+    width: 190px;
+}
+.profile__column{
+    display: flex;
+    flex-direction: column;
+}
+
+ .profile__edit-btn{
+    margin-top: auto;
+    background-color:#fcf5e5;
+    margin-right: auto;
+    color: rgba(33, 33, 33, 0.8);;
+    border:none;
+    display: flex;
+    padding: 0;
+    gap: 8px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 16px;
+;
+
+}
+.profile__add-btn{
+    background-color:#212121 ;
+    width: 157px;
+    height: 52px;
+    margin-left: auto;
+    margin-top: auto;
+    color: #fcf5e5;
+    border-radius: 10px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 16px;
+    gap: 8px;
+}
+
+.profile__name{
+    margin: 0 0 12px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 420px;
+}
+
+.profile_desctription{
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(33, 33, 33, 0.8);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 420px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 627px) {
+    .profile{
+     flex-direction: column;
+     max-width: 327px;
+     align-items: center;
+     text-align: center;
+     padding-top: 20px;
+    }
+    .profile__avatar{
+    height: 80px;
+     width: 80px;   
+     margin: 0 0 12px;
+    }
+    .profile__name{
+    font-size: 20px;
+    margin: 0 0 6px;
+    max-width: 288px;
+    
+    }
+    .profile_desctription{
+        margin: 0 0 32px;
+        max-width: 288px;
+    }
+    .profile__column{
+        margin: 0 0 20px;
+    }
+    .profile__add-btn{
+        margin: 0;
+        width: 100%;
+    }
+    .profile__edit-btn{
+     text-align: center;
+     justify-content: center;
+     margin: 0
+    ;
+    }
+}
