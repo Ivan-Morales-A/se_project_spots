@@ -10,6 +10,7 @@
     margin-right: 20px;
     height: 190px;
     width: 190px;
+    border-radius: 8px;
 }
 .profile__column{
     display: flex;
@@ -28,8 +29,10 @@
     font-weight: 500;
     line-height: 1;
     font-size: 16px;
-;
-
+    
+}
+.profile__edit-btn:hover{
+    cursor: pointer;
 }
 .profile__add-btn{
     background-color:#212121 ;
@@ -38,13 +41,15 @@
     margin-left: auto;
     margin-top: auto;
     color: #fcf5e5;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 500;
     line-height: 1;
     font-size: 16px;
     gap: 8px;
 }
-
+.profile__add-btn:hover{
+    cursor: pointer;
+}
 .profile__name{
     margin: 0 0 12px;
     font-weight: 500;
@@ -56,9 +61,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     max-width: 420px;
+    color: #212121;
 }
 
-.profile_desctription{
+.profile__desctription{
     margin: 0;
     text-overflow: ellipsis;
     overflow: hidden;

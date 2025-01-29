@@ -9,17 +9,20 @@
     margin: 0 auto;
     color: rgba(33, 33, 33, 0.8);
   }
+  .footer__copyright{
+    margin: 0;
+  }
 
   @media screen and  (max-width: 672px)
   { 
    
     
         .footer {
-          width: 100%;
-          line-height: 16px;
-          padding: 60px 0; 
-          margin: 0 auto;
-          height: auto;
+          
+    line-height: 16px;
+    padding: 60px 0; 
+    margin: 0 auto;
+    height: auto;
         }
       
     
