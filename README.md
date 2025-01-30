@@ -15,6 +15,7 @@ This project is designed to ensure that all elements are displayed correctly acr
 
  - ![IMG](./images/1440_Screenshoy.png)
  - ![IMG](./images/mobile_screenshot.png)
+ - [Link To video](https://www.canva.com/design/DAGdr8XbdgM/3mt76M5RgsiqH-Q8VXajEg/edit?utm_content=DAGdr8XbdgM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Plans for Improving the Project
 
