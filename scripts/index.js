@@ -7,3 +7,22 @@ const initialCards = [
 {name: "US Flag", link: "https://plus.unsplash.com/premium_photo-1738779001501-8a84fd12a449?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D"},
 ];
 console.log(initialCards);
+
+
+const profileEditButton = document.querySelector(".profile__edit-btn");
+
+const editModal = document.querySelector("#edit-modal");
+
+const editModalCloseBtn = editModal.querySelector(".modal__close-btn")
+
+
+function openModal (){
+    editModal.classList.add("modal__opened");
+
+}
+function closeModal(){
+    editModal.classList.remove("modal__opened");
+}
+profileEditButton.addEventListener("click", openModal);
+
+editModalCloseBtn.addEventListener("click", closeModal);
