@@ -6,23 +6,63 @@ const initialCards = [
 {name: "Secret Owl", link: "https://images.unsplash.com/photo-1734907865880-6eb669831b9e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NHx8fGVufDB8fHx8fA%3D%3D"},
 {name: "US Flag", link: "https://plus.unsplash.com/premium_photo-1738779001501-8a84fd12a449?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D"},
 ];
-console.log(initialCards);
+
 
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
+const profile__name =document.querySelector(".profile__name");
+const profile__desctription = document.querySelector(".profile__desctription");
 
 const editModal = document.querySelector("#edit-modal");
 
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn")
+const editModalNameInput = editModal.querySelector("#profile-name-input");
+const editModalDesctription = editModal.querySelector("#profile-description-input")
+const editFormElement = editModal.querySelector(".modal__form")
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list")
 
+
+
+function getCardElement (data){
+ const cardElement = cardTemplate.content
+ .querySelector(".card")
+ .cloneNode(true);
+
+ const cardNameEl = cardElement.querySelector(".card__tittle") ;
+ const cardImgEl = cardElement.querySelector(".card__image")
+
+ cardNameEl.textContent = data.name;
+ cardImgEl.src = data.link;
+ return cardElement;
+}
 
 function openModal (){
+    editModalNameInput.value = profile__name.textContent;
+    editModalDesctription.value = profile__desctription.textContent;
     editModal.classList.add("modal__opened");
 
 }
+
 function closeModal(){
     editModal.classList.remove("modal__opened");
 }
+function handleEditFormSubmit(evt){
+    evt.preventDefault();
+    profile__name.textContent = editModalNameInput.value;
+    profile__desctription.textContent = editModalDesctription.value;
+}
+
+
 profileEditButton.addEventListener("click", openModal);
 
 editModalCloseBtn.addEventListener("click", closeModal);
+
+editFormElement.addEventListener("submit", handleEditFormSubmit);
+
+for (let i = 0; i < initialCards.length; i++) {
+    const cardElement = getCardElement(initialCards[i]);
+    cardsList.prepend(cardElement)
+
+}
+
