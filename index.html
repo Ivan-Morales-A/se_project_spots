@@ -21,7 +21,7 @@
         </header>
     <main class="content">
         <section class="profile page__section">
-            <img src="./images/avatar.jpg" alt="" class="profile__avatar">
+            <img src="./images/avatar.jpg" alt="Bessie Cole Picture" class="profile__avatar">
             <div class="profile__column">
                 <h1 class="profile__name" >Bessie Coleman</h1>
                 <p class="profile__desctription">Civil Aviator</p>
@@ -55,14 +55,18 @@
       </footer>
      <div class="modal" id="edit-modal" >
         <div class="modal__container">
-            <button  type="submit" class="modal__close-btn">
+            <button  type="button" class="modal__close-btn">
                 
             </button>
        <h2 class="modal__title">Edit Profile</h2>
             <form name="edit-profile" class="modal__form">
             <label for="profile-name-input" class="modal__label">
                 Name
-                <input id="profile-name-input"  type="text" class="modal__input" placeholder="Type your name">
+                <input id="profile-name-input"  
+                type="text" 
+                class="modal__input" 
+                placeholder="Type your name"
+                required>
             </label>
             <label for="profile-description-input" class="modal__label">
                 Description
